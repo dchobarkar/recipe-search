@@ -12,8 +12,9 @@ class App extends Component {
   };
 
   getRecipe = async (e) => {
-    const recipeName = e.target.elements.recipeName.value;
     e.preventDefault();
+
+    const recipeName = e.target.elements.recipeName.value;
     const api_call = await fetch(
       `http://food2fork.com/api/search?key=${API_KEY}&q=${recipeName}&count=10`
     );
